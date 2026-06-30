@@ -1,0 +1,287 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Ensign Site Service</title>
+  <meta name="description" content="Browse completed projects by Ensign Site Service — piping installations, tank builds, plant maintenance and more across the UK." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="LOGO/Icon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="LOGO/ENSIGN SITE SERVICE LOGO.png" alt="Ensign Site Service" />
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html"    class="nav__link">Home</a></li>
+          <li><a href="services.html" class="nav__link">Services</a></li>
+          <li><a href="projects.html" class="nav__link nav__link--active">Projects</a></li>
+          <li><a href="about.html"    class="nav__link">About</a></li>
+          <li><a href="contact.html"  class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="tel:+441513557474" class="header__phone">0151 355 7474</a>
+        <a href="contact.html" class="header__cta">Contact Us</a>
+        <button class="header__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <span class="eyebrow">Our Track Record</span>
+      <h1 class="page-hero__title">Projects</h1>
+      <p class="page-hero__sub">A selection of projects completed across the UK — from complex pipework installations to fuel and storage tank builds.</p>
+    </div>
+  </section>
+
+  <!-- FILTER -->
+  <div class="filter-bar">
+    <div class="container" style="padding:0; max-width:none;">
+      <div class="filter-bar__inner" style="padding:0 48px;">
+        <button class="filter-btn active" onclick="filterProjects('all', this)">All Projects</button>
+        <button class="filter-btn" onclick="filterProjects('piping', this)">Piping Design</button>
+        <button class="filter-btn" onclick="filterProjects('maintenance', this)">Maintenance</button>
+        <button class="filter-btn" onclick="filterProjects('diesel', this)">Diesel Tanks</button>
+        <button class="filter-btn" onclick="filterProjects('storage', this)">Storage Tanks</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- GRID -->
+  <section class="projects-section">
+    <div class="projects-grid" id="projectsGrid">
+
+      <div class="proj-card" data-cat="piping">
+        <span class="proj-card__tag">Piping</span>
+        <div class="proj-card__placeholder"><span>Project Photo</span></div>
+        <div class="proj-card__overlay"></div>
+        <div class="proj-card__info">
+          <div class="proj-card__cat">Piping Plant Design</div>
+          <div class="proj-card__title">Process Pipework Installation — Chemical Plant</div>
+          <div class="proj-card__loc">North West England</div>
+        </div>
+      </div>
+
+      <div class="proj-card" data-cat="storage">
+        <span class="proj-card__tag">Storage</span>
+        <div class="proj-card__placeholder"><span>Project Photo</span></div>
+        <div class="proj-card__overlay"></div>
+        <div class="proj-card__info">
+          <div class="proj-card__cat">Storage Tank Solutions</div>
+          <div class="proj-card__title">6,000L Above-Ground Storage Tank — Manufacturing Site</div>
+          <div class="proj-card__loc">Yorkshire</div>
+        </div>
+      </div>
+
+      <div class="proj-card" data-cat="diesel">
+        <span class="proj-card__tag">Diesel</span>
+        <div class="proj-card__placeholder"><span>Project Photo</span></div>
+        <div class="proj-card__overlay"></div>
+        <div class="proj-card__info">
+          <div class="proj-card__cat">Diesel Tank Design</div>
+          <div class="proj-card__title">Bunded Diesel Tank Installation — Data Centre</div>
+          <div class="proj-card__loc">London</div>
+        </div>
+      </div>
+
+      <div class="proj-card" data-cat="maintenance">
+        <span class="proj-card__tag">Maintenance</span>
+        <div class="proj-card__placeholder"><span>Project Photo</span></div>
+        <div class="proj-card__overlay"></div>
+        <div class="proj-card__info">
+          <div class="proj-card__cat">Plant Maintenance</div>
+          <div class="proj-card__title">Annual Shutdown &amp; PPM — Food Processing Plant</div>
+          <div class="proj-card__loc">East Midlands</div>
+        </div>
+      </div>
+
+      <div class="proj-card" data-cat="piping">
+        <span class="proj-card__tag">Piping</span>
+        <div class="proj-card__placeholder"><span>Project Photo</span></div>
+        <div class="proj-card__overlay"></div>
+        <div class="proj-card__info">
+          <div class="proj-card__cat">Piping Plant Design</div>
+          <div class="proj-card__title">Stainless Steel Utility Pipework — Pharmaceutical</div>
+          <div class="proj-card__loc">Scotland</div>
+        </div>
+      </div>
+
+      <div class="proj-card" data-cat="storage">
+        <span class="proj-card__tag">Storage</span>
+        <div class="proj-card__placeholder"><span>Project Photo</span></div>
+        <div class="proj-card__overlay"></div>
+        <div class="proj-card__info">
+          <div class="proj-card__cat">Storage Tank Solutions</div>
+          <div class="proj-card__title">Water Storage Tank Inspection &amp; Repair</div>
+          <div class="proj-card__loc">West Midlands</div>
+        </div>
+      </div>
+
+      <div class="proj-card" data-cat="diesel">
+        <span class="proj-card__tag">Diesel</span>
+        <div class="proj-card__placeholder"><span>Project Photo</span></div>
+        <div class="proj-card__overlay"></div>
+        <div class="proj-card__info">
+          <div class="proj-card__cat">Diesel Tank Design</div>
+          <div class="proj-card__title">Emergency Generator Fuel System — Hospital</div>
+          <div class="proj-card__loc">North East England</div>
+        </div>
+      </div>
+
+      <div class="proj-card" data-cat="maintenance">
+        <span class="proj-card__tag">Maintenance</span>
+        <div class="proj-card__placeholder"><span>Project Photo</span></div>
+        <div class="proj-card__overlay"></div>
+        <div class="proj-card__info">
+          <div class="proj-card__cat">Plant Maintenance</div>
+          <div class="proj-card__title">Pipework Repair &amp; Condition Survey — Refinery</div>
+          <div class="proj-card__loc">South East England</div>
+        </div>
+      </div>
+
+      <div class="proj-card" data-cat="piping">
+        <span class="proj-card__tag">Piping</span>
+        <div class="proj-card__placeholder"><span>Project Photo</span></div>
+        <div class="proj-card__overlay"></div>
+        <div class="proj-card__info">
+          <div class="proj-card__cat">Piping Plant Design</div>
+          <div class="proj-card__title">High-Pressure Steam Pipework — Energy Plant</div>
+          <div class="proj-card__loc">Wales</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="projects-stats">
+    <div class="container">
+      <div class="projects-stats__inner">
+        <div class="ps-item">
+          <div class="ps-item__num">500+</div>
+          <div class="ps-item__label">Projects Completed</div>
+        </div>
+        <div class="ps-item">
+          <div class="ps-item__num">20+</div>
+          <div class="ps-item__label">Years Experience</div>
+        </div>
+        <div class="ps-item">
+          <div class="ps-item__num">UK</div>
+          <div class="ps-item__label">Nationwide Coverage</div>
+        </div>
+        <div class="ps-item">
+          <div class="ps-item__num">100%</div>
+          <div class="ps-item__label">Client Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-band__inner">
+        <h2 class="cta-band__title">Got a project? Let's discuss it.</h2>
+        <div class="cta-band__actions">
+          <a href="contact.html" class="btn btn--dark">Get a Quote</a>
+          <a href="services.html" class="btn btn--dark" style="border-color:rgba(0,0,0,0.15);">Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__contact">
+        <img src="LOGO/ENSIGN SITE SERVICE LOGO.png" class="footer__logo" alt="Ensign Site Service" />
+        <p class="footer__tagline">Industrial site services specialists — piping design, maintenance, and tank solutions across the UK.</p>
+        <a href="tel:+441513557474" class="footer__contact-item">
+          <span class="footer__contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="15" height="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.04 1.22 2 2 0 012 .04h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+          </span>
+          <span class="footer__contact-text">
+            <span class="footer__label">Phone</span>
+            <span class="footer__value">+44 151 355 7474</span>
+          </span>
+        </a>
+        <a href="mailto:enquiries@ensignsiteservice.co.uk" class="footer__contact-item">
+          <span class="footer__contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="15" height="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </span>
+          <span class="footer__contact-text">
+            <span class="footer__label">Email</span>
+            <span class="footer__value">enquiries@ensignsiteservice.co.uk</span>
+          </span>
+        </a>
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="15" height="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <span class="footer__contact-text">
+            <span class="footer__label">Address</span>
+            <address class="footer__address">Canal Bridge Enterprise Centre,<br />Unit 5-6, Meadow La,<br />Ellesmere Port CH65 4EH</address>
+          </span>
+        </div>
+      </div>
+      <div class="footer__map">
+        <iframe src="https://maps.google.com/maps?q=Canal+Bridge+Enterprise+Centre+Ellesmere+Port+CH65+4EH&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+    <div class="footer__brands">
+      <span class="footer__brands-label">Our Family of Brands</span>
+      <div class="footer__brand-logos">
+        <a href="#" class="footer__brand-logo-item">
+          <img src="LOGO/ENSIGN MANUFACTURING.png" alt="Ensign Manufacturing" />
+          <span class="footer__brand-def">Industrial Components</span>
+        </a>
+        <a href="index.html" class="footer__brand-logo-item footer__brand-logo-item--active">
+          <img src="LOGO/ENSIGN SITE SERVICE.png" alt="Ensign Site Service" />
+          <span class="footer__brand-def">On-Site Solutions</span>
+        </a>
+        <a href="#" class="footer__brand-logo-item">
+          <img src="LOGO/ENSIGN DESIGN STUDIO.png" alt="Ensign Design Studio" />
+          <span class="footer__brand-def">Creative &amp; Design</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__areas">
+      <span class="footer__areas-label">Areas We Serve</span>
+      <div class="footer__areas-pills">
+        <span class="footer__area-pill">📍 Ellesmere Port</span>
+        <span class="footer__area-pill">📍 Cheshire</span>
+        <span class="footer__area-pill">📍 Wirral</span>
+        <span class="footer__area-pill">📍 Chester</span>
+        <span class="footer__area-pill">📍 Merseyside</span>
+        <span class="footer__area-pill">📍 Liverpool</span>
+        <span class="footer__area-pill">📍 Manchester</span>
+        <span class="footer__area-pill">📍 North Wales</span>
+        <span class="footer__area-pill">📍 UK-Wide</span>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <a href="privacy-policy.html" class="footer__policy-link">Privacy Policy</a>
+      <p>&copy; 2025 Ensign Site Service. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function filterProjects(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.proj-card').forEach(card => {
+        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+      });
+    }
+  </script>
+
+</body>
+</html>
