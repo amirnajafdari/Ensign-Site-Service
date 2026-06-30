@@ -28,10 +28,28 @@
       <div class="header__actions">
         <a href="tel:+441513557474" class="header__phone">0151 355 7474</a>
         <a href="contact.html" class="header__cta">Contact Us</a>
-        <button class="header__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+        <button class="header__burger" aria-label="Menu" onclick="openMobileNav()"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
+
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav__head">
+      <img src="LOGO/ENSIGN SITE SERVICE LOGO.png" class="mobile-nav__logo" alt="Ensign Site Service" />
+      <button class="mobile-nav__close" onclick="closeMobileNav()" aria-label="Close menu">✕</button>
+    </div>
+    <nav class="mobile-nav__links">
+      <a href="index.html"    class="mobile-nav__link">Home</a>
+      <a href="services.html" class="mobile-nav__link mobile-nav__link--active">Services</a>
+      <a href="projects.html" class="mobile-nav__link">Projects</a>
+      <a href="about.html"    class="mobile-nav__link">About</a>
+      <a href="contact.html"  class="mobile-nav__link">Contact</a>
+    </nav>
+    <div class="mobile-nav__footer">
+      <a href="tel:+441513557474" class="mobile-nav__phone">0151 355 7474</a>
+      <a href="contact.html" class="mobile-nav__cta">Contact Us</a>
+    </div>
+  </div>
 
   <section class="page-hero">
     <div class="container page-hero__inner">
@@ -234,5 +252,15 @@
     </div>
   </footer>
 
+  <script>
+    function openMobileNav() {
+      document.getElementById('mobileNav').classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileNav() {
+      document.getElementById('mobileNav').classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+  </script>
 </body>
 </html>
