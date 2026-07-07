@@ -977,6 +977,25 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
 .svc-detail__img-label { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--grey-3); position: relative; z-index: 1; }
 
 /* ======================================
+   SERVICES DARK BACKGROUND OVERRIDES
+   ====================================== */
+
+.svc-dark .svc-detail { border-bottom-color: rgba(255,255,255,0.07); }
+.svc-dark .svc-detail__num { color: rgba(255,255,255,0.05); }
+.svc-dark .svc-detail__tag { color: rgba(255,255,255,0.45); }
+.svc-dark .svc-detail__title { color: var(--white); }
+.svc-dark .svc-detail__body { color: rgba(255,255,255,0.6); }
+.svc-dark .svc-detail__list li { color: rgba(255,255,255,0.6); }
+.svc-dark .svc-detail__list li::before { color: rgba(255,255,255,0.25); }
+.svc-dark .svc-detail__img-label { color: rgba(255,255,255,0.25); }
+.svc-dark .svc-detail__img-box { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.08); }
+.svc-dark .svc-detail__img-box::before {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+}
+
+/* ======================================
    PROJECTS PAGE
    ====================================== */
 
