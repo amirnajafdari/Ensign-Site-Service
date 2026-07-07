@@ -67,7 +67,6 @@
         <button class="filter-btn" onclick="filterProjects('tanks', this)">Tanks</button>
         <button class="filter-btn" onclick="filterProjects('platform', this)">Platform</button>
         <button class="filter-btn" onclick="filterProjects('bespoke', this)">Bespoke Products</button>
-        <button class="filter-btn" onclick="filterProjects('maintenance', this)">Plant Maintenance</button>
       </div>
     </div>
   </div>
@@ -486,14 +485,6 @@
         <div class="proj-card__info"><div class="proj-card__cat">Bespoke Products</div><div class="proj-card__title">Bespoke Product</div><div class="proj-card__loc">Ellesmere Port</div></div>
       </div>
 
-      <!-- PLANT MAINTENANCE -->
-      <div class="proj-card" data-cat="maintenance">
-        <span class="proj-card__tag">Plant Maintenance</span>
-        <img class="proj-card__img" src="./gallery/Piping/WhatsApp Image 2026-07-07 at 10.17.09 AM (2).jpeg" alt="Plant Maintenance">
-        <div class="proj-card__overlay"></div>
-        <div class="proj-card__info"><div class="proj-card__cat">Plant Maintenance</div><div class="proj-card__title">Plant Maintenance Works</div><div class="proj-card__loc">Ellesmere Port</div></div>
-      </div>
-
     </div>
   </section>
 
@@ -626,6 +617,11 @@
         card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
       });
     }
+    // Apply default filter on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      var firstBtn = document.querySelector('.filter-btn.active');
+      if (firstBtn) firstBtn.click();
+    });
   </script>
 
 </body>
