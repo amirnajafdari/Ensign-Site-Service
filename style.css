@@ -912,6 +912,18 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
 }
 .footer__policy-link:hover { color: #fff; border-color: #fff; }
 
+.footer__credit {
+  font-size: 14.5px;
+  color: rgba(255,255,255,0.3);
+}
+.footer__credit-link {
+  color: #f5a623;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.footer__credit-link:hover { color: #ffc35c; }
+
 /* ======================================
    PAGE HERO (inner pages)
    ====================================== */
