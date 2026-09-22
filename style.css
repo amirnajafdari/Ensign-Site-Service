@@ -1040,13 +1040,9 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
    ====================================== */
 
 .about-intro { padding: 96px 0; background: var(--white); border-top: 1px solid var(--border); }
-.about-intro__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.about-intro__inner { max-width: 760px; }
 .about-intro__title { font-size: 38px; font-weight: 800; color: var(--black); margin-bottom: 28px; }
 .about-intro__body { font-size: 16.5px; color: var(--grey-5); line-height: 1.85; margin-bottom: 18px; }
-.about-mini-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--border); border: 1px solid var(--border); }
-.about-mini-stat { background: var(--white); padding: 32px 24px; }
-.about-mini-stat__num { font-size: 40px; font-weight: 800; color: var(--black); letter-spacing: -0.04em; line-height: 1; margin-bottom: 6px; }
-.about-mini-stat__label { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--grey-4); }
 
 .values-section { background: var(--grey-0); padding: 96px 0; border-top: 1px solid var(--border); }
 .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--border); border: 1px solid var(--border); margin-top: 56px; }
@@ -1298,8 +1294,6 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
 
   /* About page */
   .about-intro { padding: 56px 0; }
-  .about-intro__inner { grid-template-columns: 1fr; gap: 40px; }
-  .about-mini-stats { grid-template-columns: 1fr 1fr; }
   .values-section { padding: 56px 0; }
   .values-grid { grid-template-columns: 1fr; }
   .timeline-section { padding: 56px 0; }
@@ -1349,7 +1343,6 @@ h1, h2, h3, h4 { line-height: 1.08; letter-spacing: -0.025em; }
   .footer__brand-logos { flex-direction: column; }
   .industries-grid { grid-template-columns: 1fr; }
   .about-stats { grid-template-columns: 1fr; }
-  .about-mini-stats { grid-template-columns: 1fr; }
   .hero__stats { grid-template-columns: 1fr 1fr; }
   .svc-card__body { padding: 20px 16px 24px; }
 }
